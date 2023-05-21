@@ -30,12 +30,21 @@ public class Jatek {
                 }
 
             }
+            try {
+                Thread.sleep(1000); // 1 másodperc várakozás
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 
     public static void main(String[] args) {
         Jatek jatek = new Jatek();
-        jatek.jatekFut();
+        Thread jatekSzal = new Thread(() -> {
+            jatek.jatekFut();
+        });
+        jatekSzal.start();
     }
 }
 
