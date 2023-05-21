@@ -47,9 +47,3 @@ public class Jatek {
         jatekSzal.start();
     }
 }
-
-class HarcException extends Exception {
-    public HarcException(String message) {
-        super(message);
-    }
-}
