@@ -7,9 +7,4 @@ public class Varazslo extends Karakter {
         pozicio = 2;
     }
 
-  @Override
-    public void szenved(int tamadoEro){
-        super.szenved(tamadoEro);
-  }
-
 }

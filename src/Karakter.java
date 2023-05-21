@@ -20,8 +20,11 @@ public class Karakter {
         pozicio = ujPozicio;
     }
 
-    public void szenved(int tamadoEro) {
+    public void szenved(int tamadoEro) throws HarcException {
         eletero -= tamadoEro;
+        if (eletero <= 0){
+            throw new HarcException("Játék vége!");
+        }
     }
 
     protected int dobD6() {

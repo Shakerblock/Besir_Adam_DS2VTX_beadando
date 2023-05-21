@@ -7,9 +7,6 @@ class Harcos extends Karakter {
         eletero = dobD6() + 3;
     }
 
-    @Override
-    public void szenved(int tamadoEro){
-        super.szenved(tamadoEro);
-    }
-
 }
+
+

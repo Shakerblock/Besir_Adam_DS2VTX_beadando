@@ -7,7 +7,7 @@ public class Harc {
         this.varazslo = varazslo;
     }
 
-    public void harcoljunk() {
+    public void harcoljunk() throws HarcException {
         int harcosTamadoEro = harcos.dobD6();
         int varazsloTamadoEro = varazslo.dobD6();
         harcos.szenved(varazsloTamadoEro);

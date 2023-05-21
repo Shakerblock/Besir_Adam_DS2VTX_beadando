@@ -21,11 +21,14 @@ public class Jatek {
             harcos.lepes(random.nextInt(3));
             varazslo.lepes(random.nextInt(3));
             if (harcos.getPozicio() == varazslo.getPozicio()) {
-                harcSzimulator.harcoljunk();
-                if (harcos.getEletero() <= 0 || varazslo.getEletero() <= 0) {
+                try{
+                    harcSzimulator.harcoljunk();
+                } catch(HarcException e) {
                     kiirato.kiirTer();
+                    System.out.println(e.getMessage());
                     vege = true;
                 }
+
             }
         }
     }
@@ -33,5 +36,11 @@ public class Jatek {
     public static void main(String[] args) {
         Jatek jatek = new Jatek();
         jatek.jatekFut();
+    }
+}
+
+class HarcException extends Exception {
+    public HarcException(String message) {
+        super(message);
     }
 }
